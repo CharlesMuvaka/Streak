@@ -50,4 +50,14 @@ public class CardDeck {
         return deckCards.getSize();
     }
 
+    @Override
+    public String toString(){
+        String str = String.format("You deck consists of %d cards \n", deckCards.getSize());
+        for (int i = 0; i < deckCards.getSize(); i++) {
+            str += deckCards.getCard(i).toString();
+            str += "\n";
+        }
+        return str;
+    }
+
 }
