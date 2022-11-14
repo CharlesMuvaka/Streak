@@ -13,6 +13,10 @@ public class PlayerHand {
         return this.name;
     }
 
+    public int getPlayerTotalCards(){
+        return playerCards.getSize();
+    }
+
 
 
 }
