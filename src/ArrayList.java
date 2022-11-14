@@ -20,4 +20,11 @@ public class ArrayList {
         }
         this.size--;
     }
+
+    //create a method to get the size of the arrayList
+    public int getSize(){
+        return this.size;
+    }
+
+
 }
