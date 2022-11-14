@@ -44,4 +44,9 @@ public class Card {
 
         return isRankMatching && isSuitMatching && isCardValueMatching;
     }
+
+    @Override
+    public String toString(){
+        return new String("Card { cardRank = " + this.rank + "," + " cardSuitName = " + this.suit.getName() + "," + " CardSuitColor = " + this.suit.getColor() + "," + " CardValue = " + this.cardValue + "}.");
+    }
 }
