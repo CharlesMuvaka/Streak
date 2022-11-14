@@ -12,4 +12,12 @@ public class ArrayList {
         cards[size] = card; //the card's index in the array will be equal to the array size
         size++;
     }
+
+    //create a method to remove an item from the arraylist
+    public void removeCard(int index){
+        for(int i = index; i < cards.length; i++){
+            cards[i] = cards[i + 1]; //the card to be removed will be assigned details of the next card
+        }
+        this.size--;
+    }
 }
