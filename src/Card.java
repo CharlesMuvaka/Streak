@@ -11,4 +11,36 @@ public class Card {
 
     public Card() {
     }
+
+    public String getSuit() {
+        return suit;
+    }
+
+    public void setSuit(String suit) {
+        this.suit = suit;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+    public String getSuitColor() {
+        return suitColor;
+    }
+
+    public void setSuitColor(String suitColor) {
+        this.suitColor = suitColor;
+    }
+
+    public int getCardValue() {
+        return cardValue;
+    }
+
+    public void setCardValue(int cardValue) {
+        this.cardValue = cardValue;
+    }
 }
