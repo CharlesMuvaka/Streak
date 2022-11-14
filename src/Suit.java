@@ -3,4 +3,8 @@ public class Suit {
 
     public Suit(){}
 
+    public Suit(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
 }
