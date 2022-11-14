@@ -17,6 +17,11 @@ public class PlayerHand {
         return playerCards.getSize();
     }
 
-
+    public String checkCards(){
+        if (playerCards.getSize() == 0){
+            return this.name + " has no cards";
+        }
+        return this.name + " has a total of " + this.playerCards.getSize();
+    }
 
 }
