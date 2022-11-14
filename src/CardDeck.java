@@ -36,4 +36,16 @@ public class CardDeck {
         }
     }
 
+    public CardDeck(){
+        for (int i = 0; i < cardRanks.length; i++) {
+            for (int j = 0; j < cardSuits.length ; j++) {
+                Card newCard = new Card(cardRanks[i], cardSuits[j], CardDeck.getDefaultCardValues(cardRanks[i]));
+                deckCards.addCard(newCard);
+            }
+
+        }
+    }
+
+
+
 }
