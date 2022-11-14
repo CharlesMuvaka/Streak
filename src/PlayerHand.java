@@ -6,6 +6,8 @@ public class PlayerHand {
         this.name = name;
     }
 
-
+    public void addPlayerCards(Card card){
+        playerCards.addCard(card);
+    }
 
 }
