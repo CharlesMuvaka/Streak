@@ -1,22 +1,18 @@
 public class Card {
-    private String suit, rank, suitColor;
+    private String rank;
+    private Suit suit;
     private int cardValue;
 
-    public Card(String suit, String rank, String suitColor, int cardValue) {
+    public Card( String rank, Suit suit, int cardValue) {
         this.suit = suit;
         this.rank = rank;
-        this.suitColor = suitColor;
         this.cardValue = cardValue;
     }
 
     public Card() {
     }
 
-    public String getSuit() {
-        return suit;
-    }
-
-    public void setSuit(String suit) {
+    public void setSuit(Suit suit) {
         this.suit = suit;
     }
 
@@ -28,13 +24,10 @@ public class Card {
         this.rank = rank;
     }
 
-    public String getSuitColor() {
-        return suitColor;
+    public Suit getSuit() {
+        return suit;
     }
 
-    public void setSuitColor(String suitColor) {
-        this.suitColor = suitColor;
-    }
 
     public int getCardValue() {
         return cardValue;
@@ -42,5 +35,13 @@ public class Card {
 
     public void setCardValue(int cardValue) {
         this.cardValue = cardValue;
+    }
+
+    public boolean matches(Card card){
+        boolean isRankMatching = this.rank.equals(card.getRank());
+        boolean isSuitMatching = this.suit.equals(card.getSuit());
+        boolean isCardValueMatching = this.cardValue == card.getCardValue();
+
+        return isRankMatching && isSuitMatching && isCardValueMatching;
     }
 }
