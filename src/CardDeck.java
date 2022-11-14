@@ -46,6 +46,8 @@ public class CardDeck {
         }
     }
 
-
+    public int getCardDeckSize(){
+        return deckCards.getSize();
+    }
 
 }
