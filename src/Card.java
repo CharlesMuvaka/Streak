@@ -8,4 +8,7 @@ public class Card {
         this.suitColor = suitColor;
         this.cardValue = cardValue;
     }
+
+    public Card() {
+    }
 }
