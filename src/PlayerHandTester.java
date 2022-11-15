@@ -12,6 +12,23 @@ public class PlayerHandTester {
         return deck;
     }
 
+    public static PlayerHand createAHand(){
+        PlayerHand playerOne = new PlayerHand("Tester");
+
+            //shuffling the deck
+            deck.getDeckCards().shuffleCards();
+            for (int i = 0; i < deck.getCardDeckSize() ; i++) {
+
+                //Giving the player Five cards to initiate the game
+                Card newCard = deck.getDeckCards().getCard(i);
+                if(playerOne.getPlayerCards().getSize() < 5){
+
+                playerOne.addPlayerCards(newCard);
+                }
+            }
+
+        return playerOne;
+    }
 
 
 
