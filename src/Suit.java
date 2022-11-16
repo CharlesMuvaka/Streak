@@ -23,4 +23,12 @@ public class Suit {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public boolean matches(Suit suit){
+        boolean isNameMatching = this.name.equalsIgnoreCase(suit.getName());
+        boolean isColorMatching = this.color.equalsIgnoreCase(suit.getColor());
+
+        return isNameMatching && isColorMatching;
+    }
+
 }
