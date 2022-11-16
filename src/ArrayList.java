@@ -17,7 +17,7 @@ public class ArrayList {
 
     //create a method to remove an item from the arraylist
     public void removeCard(int index){
-        for(int i = index; i < cards.length; i++){
+        for(int i = index; i < cards.length -1; i++){
             cards[i] = cards[i + 1]; //the card to be removed will be assigned details of the next card
         }
         this.size--;
@@ -43,4 +43,21 @@ public class ArrayList {
     public Card getCard(int index){
         return this.cards[index];
     }
+
+    @Override
+    public String toString(){
+        if (cards.length == 0){
+            return  "You has no cards";
+        }else{
+            String str = new String("You has the following cards \n");
+            for (int i = 0; i < cards.length; i++) {
+                str += cards[i].toString();
+                str += "\n";
+            }
+            return str;
+        }
+
+    }
+
+
 }
