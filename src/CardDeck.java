@@ -1,9 +1,29 @@
 public class CardDeck {
-    private static final ArrayList deckCards = new ArrayList(52);
-    private String[] cardRanks = {"two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"};
-    private Suit[] cardSuits = {new Suit("diamonds", "red"), new Suit("cubs", "black"), new Suit("hearts", "red"), new Suit("hearts", "red")};
+    private final ArrayList deckCards;
 
-    private static int getDefaultCardValues(String rank){
+    public CardDeck(int[] values, String[] cardRanks,Suit[] suits){
+        deckCards = new ArrayList(5);
+        for (int i = 0; i < cardRanks.length; i++) {
+                Card newCard = new Card(cardRanks[i], suits[i], values[i] );
+                deckCards.addCard(newCard);
+        }
+    }
+    public CardDeck(){
+         deckCards = new ArrayList(52);
+        String[] cardRanks = {"two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"};
+        for (int i = 0; i < cardRanks.length; i++) {
+            Suit[] cardSuits = {new Suit("diamonds", "red"), new Suit("cubs", "black"), new Suit("hearts", "red"), new Suit("hearts", "red")};
+            for (int j = 0; j < cardSuits.length ; j++) {
+                Card newCard = new Card(cardRanks[i], cardSuits[j], CardDeck.getDefaultCardValues(cardRanks[i]));
+                deckCards.addCard(newCard);
+            }
+
+        }
+    }
+
+
+
+    public static int getDefaultCardValues(String rank){
         switch(rank){
             case "two":
                 return 2;
@@ -36,18 +56,46 @@ public class CardDeck {
         }
     }
 
-    public CardDeck(){
-        for (int i = 0; i < cardRanks.length; i++) {
-            for (int j = 0; j < cardSuits.length ; j++) {
-                Card newCard = new Card(cardRanks[i], cardSuits[j], CardDeck.getDefaultCardValues(cardRanks[i]));
-                deckCards.addCard(newCard);
-            }
-
+    public static String getDefaultCardRanks(int value){
+        switch(value){
+            case 2:
+                return "two";
+            case 3:
+                return "three";
+            case 4:
+                return "four";
+            case 5:
+                return "five";
+            case 6:
+                return "six";
+            case 7:
+                return "seven";
+            case 8:
+                return "eight";
+            case 9:
+                return "nine";
+            case 10:
+                return "ten";
+            case 11:
+                return "jack";
+            case 12:
+                return "queen";
+            case 13:
+                return "king";
+            case 1:
+                return "ace";
+            default:
+                return "0";
         }
     }
 
+
     public int getCardDeckSize(){
         return deckCards.getSize();
+    }
+
+    public ArrayList getDeckCards(){
+        return deckCards;
     }
 
     @Override
