@@ -2,7 +2,7 @@ public class CardDeck {
     private final ArrayList deckCards;
 
     public CardDeck(int[] values, String[] cardRanks,Suit[] suits){
-        deckCards = new ArrayList(5);
+        deckCards = new ArrayList(10);
         for (int i = 0; i < cardRanks.length; i++) {
                 Card newCard = new Card(cardRanks[i], suits[i], values[i] );
                 deckCards.addCard(newCard);
@@ -12,7 +12,7 @@ public class CardDeck {
          deckCards = new ArrayList(52);
         String[] cardRanks = {"two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"};
         for (int i = 0; i < cardRanks.length; i++) {
-            Suit[] cardSuits = {new Suit("diamonds", "red"), new Suit("cubs", "black"), new Suit("hearts", "red"), new Suit("hearts", "red")};
+            Suit[] cardSuits = {new Suit("diamonds", "red"), new Suit("cubs", "black"), new Suit("hearts", "red"), new Suit("spades", "black")};
             for (int j = 0; j < cardSuits.length ; j++) {
                 Card newCard = new Card(cardRanks[i], cardSuits[j], CardDeck.getDefaultCardValues(cardRanks[i]));
                 deckCards.addCard(newCard);
