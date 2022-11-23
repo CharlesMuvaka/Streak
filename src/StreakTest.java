@@ -13,7 +13,7 @@ public class StreakTest {
     }
 
     public static PlayerHand createAHand(){
-        PlayerHand playerOne = new PlayerHand("Tester");
+        PlayerHand playerOne = new PlayerHand("Tester", 6);
 
             //shuffling the deck
             deck.getDeckCards().shuffleCards();
@@ -31,7 +31,7 @@ public class StreakTest {
     }
 
     public static int checkPlayerScore(){
-        PlayerHand playerTwo = new PlayerHand("Charles");
+        PlayerHand playerTwo = new PlayerHand("Charles", 6);
         int score = 0;
 
         Card card = new Card("one", new Suit("cubs", "black"), 1);
